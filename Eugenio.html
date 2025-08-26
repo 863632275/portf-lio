@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio Pessoal</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    /* Reset básico */
+    * {margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
+    body {background-color:#f5f7fa; color:#333;}
+    
+    /* Cabeçalho com gradiente */
+    header {
+        background: linear-gradient(135deg,#6a11cb,#2575fc);
+        color:white;
+        text-align:center;
+        padding:60px 20px;
+        border-bottom-left-radius:50px;
+        border-bottom-right-radius:50px;
+    }
+    header h1 {font-size:2.5rem; margin-bottom:10px;}
+    header p {font-size:1.2rem;}
+
+    /* Navegação com botões */
+    nav {
+        margin-top:20px;
+    }
+    nav a {
+        text-decoration:none;
+        color:white;
+        background: rgba(255,255,255,0.2);
+        padding:10px 20px;
+        border-radius:25px;
+        margin: 0 10px;
+        transition:0.3s;
+    }
+    nav a:hover {
+        background: rgba(255,255,255,0.5);
+        transform: scale(1.1);
+    }
+
+    main {max-width:1200px; margin:0 auto; padding:50px 20px;}
+    section {margin-bottom:60px;}
+    section h2 {text-align:center; margin-bottom:30px; position:relative;}
+    section h2::after {
+        content:"";
+        display:block;
+        width:50px;
+        height:3px;
+        background:#2575fc;
+        margin:10px auto 0;
+        border-radius:2px;
+    }
+
+    /* Habilidades em Grid */
+    .grid-habilidades {
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+        gap:20px;
+        max-width:1000px;
+        margin:0 auto;
+    }
+    .card-habilidade {
+        background:white;
+        padding:25px 15px;
+        border-radius:15px;
+        box-shadow:0 4px 8px rgba(0,0,0,0.1);
+        font-weight:bold;
+        transition: transform 0.3s, box-shadow 0.3s;
+        text-align:center;
+    }
+    .card-habilidade:hover {
+        transform: translateY(-10px);
+        box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Projetos em Grid */
+    .grid-projetos {
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+        gap:25px;
+        max-width:1200px;
+        margin:0 auto;
+    }
+    .card-projeto {
+        background:white;
+        padding:20px;
+        border-radius:15px;
+        box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card-projeto:hover {
+        transform: translateY(-10px);
+        box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    }
+    .tags span {
+        display:inline-block;
+        background:#2575fc;
+        color:white;
+        padding:5px 10px;
+        border-radius:20px;
+        font-size:0.8em;
+        margin:5px 5px 0 0;
+    }
+
+    /* Contato em duas colunas */
+    .contato-container {
+        display:flex;
+        flex-wrap:wrap;
+        gap:40px;
+        max-width:1000px;
+        margin:0 auto;
+        justify-content:center;
+        text-align:left;
+    }
+    .form-contato {
+        flex:1 1 400px;
+        display:flex;
+        flex-direction:column;
+        gap:20px;
+        background:white;
+        padding:30px;
+        border-radius:15px;
+        box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    }
+    .form-row {display:flex; gap:20px;}
+    .form-row input {flex:1; padding:12px 15px; border-radius:10px; border:1px solid #ccc;}
+    .form-contato textarea {padding:12px 15px; border-radius:10px; border:1px solid #ccc; resize:vertical;}
+    .form-contato button {
+        padding:15px;
+        border-radius:25px;
+        border:none;
+        background:#2575fc;
+        color:white;
+        font-weight:bold;
+        cursor:pointer;
+        transition:0.3s;
+    }
+    .form-contato button:hover {background:#6a11cb;}
+    .info-contato {flex:1 1 300px; display:flex; flex-direction:column; gap:15px; font-size:1em;}
+    .info-contato a {color:#2575fc; text-decoration:none;}
+    .info-contato a:hover {text-decoration:underline;}
+
+    footer {text-align:center; padding:30px; background:#333; color:white;}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Eugenio Castigo Homo</h1>
+    <p>Desenvolvedor Web | Front-End</p>
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+
+<main>
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p>Sou um desenvolvedor web apaixonado por criar experiências digitais interativas e responsivas. Tenho experiência com HTML, CSS, JavaScript e frameworks modernos como React.</p>
+    </section>
+
+    <section id="habilidades">
+        <h2>Minhas Habilidades</h2>
+        <div class="grid-habilidades">
+            <div class="card-habilidade">HTML</div>
+            <div class="card-habilidade">CSS</div>
+            <div class="card-habilidade">JavaScript</div>
+            <div class="card-habilidade">Java</div>
+            <div class="card-habilidade">React</div>
+            <div class="card-habilidade">Node.js</div>
+        </div>
+    </section>
+
+    <section id="projetos">
+        <h2>Meus Projetos</h2>
+        <div class="grid-projetos">
+            <div class="card-projeto">
+                <h3>Portfólio Pessoal</h3>
+                <p>Um site pessoal para exibir meus projetos e habilidades.</p>
+                <div class="tags">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
+            </div>
+            <div class="card-projeto">
+                <h3>ToDo App</h3>
+                <p>Aplicativo de lista de tarefas com persistência no navegador.</p>
+                <div class="tags">
+                    <span>React</span><span>CSS</span><span>LocalStorage</span>
+                </div>
+            </div>
+            <div class="card-projeto">
+                <h3>Sistema de Salas</h3>
+                <p>Gerenciamento de salas de aula com Java e banco de dados.</p>
+                <div class="tags">
+                    <span>Java</span><span>MySQL</span><span>OOP</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Vamos Trabalhar Juntos?</h2>
+        <div class="contato-container">
+            <form class="form-contato">
+                <div class="form-row">
+                    <input type="text" name="nome" placeholder="Nome" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-row">
+                    <input type="text" name="assunto" placeholder="Assunto" required>
+                    <input type="tel" name="telefone" placeholder="Telefone">
+                </div>
+                <textarea name="mensagem" rows="6" placeholder="Mensagem" required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+
+            <div class="info-contato">
+                <p><strong>Email:</strong> eugenio.homo@example.com</p>
+                <p><strong>Telefone:</strong> +258 863632275</p>
+                <p><strong>Localização:</strong> Maputo, Moçambique</p>
+                <p><strong>Redes Sociais:</strong> 
+                    <a href="#">LinkedIn</a> | 
+                    <a href="#">GitHub</a>
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Eugenio castigo Homo. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
